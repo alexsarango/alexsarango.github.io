@@ -1,5 +1,7 @@
 body {
-background-color: white;
+    background-color: white;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
 }
 
 .topnav {
@@ -28,7 +30,8 @@ background-color: white;
 
 .flex-center {
   width: 100%;
-  min-height: 30vh;
+  min-height: 10vh;
+  margin: 10px;
   background: #fff;
 
   display: -webkit-box;
@@ -49,7 +52,4 @@ background-color: white;
     align-items:center;
     padding: 30px;
     color: #000000;
-}
-.p {
-    font-family: erif;
 }
