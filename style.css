@@ -1,3 +1,7 @@
+body {
+background-color: white;
+}
+
 .topnav {
   background-color: #333;
   overflow: hidden;
@@ -24,8 +28,7 @@
 
 .flex-center {
   width: 100%;
-  min-height: 89vh;
-
+  min-height: 30vh;
   background: #fff;
 
   display: -webkit-box;
@@ -44,6 +47,6 @@
 
 .icon-3d {
     align-items:center;
-    padding: 20px;
+    padding: 30px;
     color: #000000;
 }
