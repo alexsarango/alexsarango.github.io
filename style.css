@@ -28,6 +28,12 @@ body {
   color: black;
 }
 
+a:link{
+    color: blue;
+    background-color: transparent;
+    text-decoration: none;
+}
+
 .flex-center {
   width: 100%;
   min-height: 10vh;
