@@ -123,6 +123,13 @@ a:link{
     .home-block1 {
         width: 100%;
     }
-
-
+    .flex-center {
+        width: 100%;
+    }
+    .block1 {
+        width: 100%;
+    }
+    .block3 {
+        width: 100%
+    }
 }
