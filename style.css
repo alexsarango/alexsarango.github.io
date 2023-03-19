@@ -28,60 +28,63 @@ body {
   color: black;
 }
 
-p.block {
-    border: 15px solid gray;
-    border-radius: 8px;
-    padding: 5px;
-    background-color:gray;
-}
-
-div.home-block1 {
-    position: relative;
-    background-color: gray;
-    border: 10px solid gray;
-    border-radius: 10px;
-    height: 100px;
-    width: 700px;
+.container {
+    width: 100%;
+    max-width: 100%;
     margin: auto;
-    align-text: center;
+    overflow: hidden;
+    justify-content: space-between;
+}
+
+p.block {
+    border: 15px solid blue;
+    border-radius: 8px;
     padding: 5px;
+    background-color: gray;
 }
 
-div.container {
-    position: relative;
-    height: 435px;
-}
-
-div.block1 {
+.home-block1 {
+    width: 50%;
+    background-color: gray;
+    padding: 1%;
+    box-sizing: border-box;
     border: 10px solid gray;
     border-radius: 8px;
-    height: 300px;
-    width: 300px;
-    margin: 15px;
-    background-color: gray;
-    position: inline-block;
+    text-align: justify;
+    padding: 10px;
+    margin: auto;
 }
 
-div.block2 {
+.block1 {
+    width: 49.5%;
+    background-color: gray;
+    padding: 2%;
+    box-sizing: border-box;
     border: 10px solid gray;
     border-radius: 8px;
-    top: 0px;
-    left: 350px;
-    width: 300px;
-    height: 300px;
-    background-color: gray;
-    position: absolute;
+    float: left;
 }
 
-div.block3 {
+.block2 {
+    width: 33%;
+    background-color: gray;
+    padding: 2%;
+    box-sizing: border-box;
     border: 10px solid gray;
     border-radius: 8px;
-    top: 0px;
-    left: 685px;
-    width: 300px;
-    height: 400px;
+    float: left;
+    margin: auto;
+}
+
+.block3 {
+    width: 49.5%;
     background-color: gray;
-    position: absolute;
+    padding: 2%;
+    box-sizing: border-box;
+    border: 10px solid gray;
+    border-radius: 8px;
+    float: right;
+    margin: auto;
 }
 
 a:link{
@@ -114,4 +117,12 @@ a:link{
     align-items:center;
     padding: 30px;
     color: #000000;
+}
+
+@media screen and (max-width: 5.4in){
+    .home-block1 {
+        width: 100%;
+    }
+
+
 }
