@@ -45,11 +45,11 @@ p.block {
 
 .home-block1 {
     width: 50%;
-    background-color: gray;
+    background-color: #e5e5e5;
     padding: 1%;
     box-sizing: border-box;
-    border: 10px solid gray;
-    border-radius: 8px;
+    border: 10px;
+    border-radius: 10px;
     text-align: justify;
     padding: 10px;
     margin: auto;
@@ -57,10 +57,10 @@ p.block {
 
 .block1 {
     width: 49.5%;
-    background-color: gray;
+    background-color: #e5e5e5;
     padding: 2%;
     box-sizing: border-box;
-    border: 10px solid gray;
+    border: 10px;
     border-radius: 8px;
     float: left;
 }
@@ -70,7 +70,7 @@ p.block {
     background-color: gray;
     padding: 2%;
     box-sizing: border-box;
-    border: 10px solid gray;
+    border: 10px #848484;
     border-radius: 8px;
     float: left;
     margin: auto;
@@ -78,13 +78,31 @@ p.block {
 
 .block3 {
     width: 49.5%;
-    background-color: gray;
+    background-color: #e5e5e5;
     padding: 2%;
     box-sizing: border-box;
-    border: 10px solid gray;
+    border: 10px;
     border-radius: 8px;
     float: right;
     margin: auto;
+}
+
+.courses-blocks {
+    width: 100%;
+    background-color: #e5e5e5;
+    padding: 2%;
+    box-sizing: border-box;
+    border: 10px;
+    border-radius: 8px;
+    float: left;
+    margin: auto;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
 }
 
 a:link{
@@ -115,7 +133,7 @@ a:link{
 
 .icon-3d {
     align-items:center;
-    padding: 30px;
+    padding: 20px;
     color: #000000;
 }
 
