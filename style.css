@@ -148,6 +148,9 @@ a:link{
         width: 100%;
     }
     .block3 {
-        width: 100%
+        width: 100%;
+    }
+    .center {
+        width: 70%;
     }
 }
