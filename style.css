@@ -1,12 +1,17 @@
+/* body */
 body {
     background-color: white;
     font-family: Arial, sans-serif;
     font-size: 18px;
 }
 
+/* top navigator */
+
 .topnav {
-  background-color: #333;
+  background-color: #080808;
   overflow: hidden;
+  box-sizing: border-box;
+  border-radius: 50px;
 }
 
 .topnav a {
@@ -16,87 +21,30 @@ body {
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
+  box-sizing: border-box;
+  border-radius: 10px;
 }
 
 .topnav a:hover {
-  background-color: #ddd;
+  background-color: #BEBEBE;
   color: black;
 }
 
 .topnav a.active {
-  background-color: #a6a29d;
+  background-color: #696969;
   color: black;
 }
 
-.container {
-    width: 100%;
-    max-width: 100%;
-    margin: auto;
-    overflow: hidden;
-    justify-content: space-between;
+/* common in all sections */
+
+/* common in all sections - main container */
+
+.main-container {
+    position: relative;
+    text-align: center;
 }
 
-p.block {
-    border: 15px solid blue;
-    border-radius: 8px;
-    padding: 5px;
-    background-color: gray;
-}
-
-.home-block1 {
-    width: 50%;
-    background-color: #e5e5e5;
-    padding: 1%;
-    box-sizing: border-box;
-    border: 10px;
-    border-radius: 10px;
-    text-align: justify;
-    padding: 10px;
-    margin: auto;
-}
-
-.block1 {
-    width: 49.5%;
-    background-color: #e5e5e5;
-    padding: 2%;
-    box-sizing: border-box;
-    border: 10px;
-    border-radius: 8px;
-    float: left;
-}
-
-.block2 {
-    width: 33%;
-    background-color: gray;
-    padding: 2%;
-    box-sizing: border-box;
-    border: 10px #848484;
-    border-radius: 8px;
-    float: left;
-    margin: auto;
-}
-
-.block3 {
-    width: 49.5%;
-    background-color: #e5e5e5;
-    padding: 2%;
-    box-sizing: border-box;
-    border: 10px;
-    border-radius: 8px;
-    float: right;
-    margin: auto;
-}
-
-.courses-blocks {
-    width: 100%;
-    background-color: #e5e5e5;
-    padding: 2%;
-    box-sizing: border-box;
-    border: 10px;
-    border-radius: 8px;
-    float: left;
-    margin: auto;
-}
+/* common in all sections - images*/
 
 .center {
   display: block;
@@ -105,11 +53,146 @@ p.block {
   width: 30%;
 }
 
+/* common in all sections - links */
+
 a:link{
     color: blue;
     background-color: transparent;
     text-decoration: none;
 }
+
+/* main container in all sections */
+
+.container {
+    width: 100%;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* home section */
+
+.top-home-container {
+    background-image: url("img/stars.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    align: center;
+    text-color: white;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 20px;
+}
+
+.home-block1 {
+    width: 50%;
+    background-color: #e5e5e5;
+    padding: 1%;
+    box-sizing: border-box;
+    border-radius: 10px;
+    text-align: justify;
+    margin: auto;
+}
+
+/* about me section */
+
+.top-aboutme-container {
+    background-image: url("img/moonlight.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    align: center;
+    text-color: white;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 20px;
+}
+
+.block1 {
+    width: 48%;
+    background-color: #e5e5e5;
+    padding: 2%;
+    box-sizing: border-box;
+    border: 10px;
+    border-radius: 8px;
+    float: left;
+    margin: 1%;
+}
+
+.block2 {
+    width: 30%;
+    background-color: #e5e5e5;
+    padding: 2%;
+    box-sizing: border-box;
+    border: 10px;
+    border-radius: 8px;
+    align: center;
+    margin: 2%;
+}
+
+.block3 {
+    width: 48%;
+    background-color: #e5e5e5;
+    padding: 2%;
+    box-sizing: border-box;
+    border: 10px;
+    border-radius: 8px;
+    float: right;
+    margin: 1%;
+}
+
+/* notes section */
+
+.top-notes-container {
+    background-image: url("img/notebook.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    align: center;
+    text-color: white;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 20px;
+}
+
+
+/* courses section */
+
+.top-courses-container {
+    background-image: url("img/blackboard.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    align: center;
+    text-color: white;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 20px;
+}
+
+.courses-blocks {
+    width: 100%;
+    background-color: #e5e5e5;
+    padding: 1%;
+    box-sizing: border-box;
+    border: 10px;
+    border-radius: 10px;
+    align: center;
+    margin: auto;
+}
+
+/* resources section*/
+
+.top-resources-container {
+    background-image: url("img/formulas.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    align: center;
+    text-color: white;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 20px;
+}
+
+/* contact section */
+
+/* contact section - social media button */
 
 .flex-center {
   width: 100%;
@@ -136,6 +219,8 @@ a:link{
     padding: 20px;
     color: #000000;
 }
+
+/* phone view */
 
 @media screen and (max-width: 5.4in){
     .home-block1 {
