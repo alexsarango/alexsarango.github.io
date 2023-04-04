@@ -42,6 +42,7 @@ body {
 .main-container {
     position: relative;
     text-align: center;
+    width: 100%;
 }
 
 /* common in all sections - images*/
@@ -56,8 +57,6 @@ body {
 /* common in all sections - links */
 
 a:link{
-    color: blue;
-    background-color: transparent;
     text-decoration: none;
 }
 
@@ -84,13 +83,37 @@ a:link{
 }
 
 .home-block1 {
-    width: 50%;
-    background-color: #e5e5e5;
+    display: flex;
+    width: 70%;
+    background-color: #282828;
+    color: white;
     padding: 1%;
     box-sizing: border-box;
-    border-radius: 10px;
-    text-align: justify;
+    border-radius: 15px;
     margin: auto;
+}
+
+.text-introduction {
+    width: 50%;
+    margin-left: 2rem;
+    text-align: justify;
+}
+
+.profile-photo {
+    width: 25%;
+    position: relative;
+    margin-left: 11rem;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    color: #000000;
+    background-color: #6495ED;
+    border-radius: 6px;
+    outline: none;
 }
 
 /* about me section */
@@ -225,6 +248,14 @@ a:link{
 @media screen and (max-width: 5.4in){
     .home-block1 {
         width: 100%;
+    }
+    .text-introduction {
+        width: 100%;
+        margin-left: 0rem;
+        text-align:justify;
+    }
+    .profile-photo {
+        display:none;
     }
     .flex-center {
         width: 100%;
