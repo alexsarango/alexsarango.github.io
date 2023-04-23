@@ -57,7 +57,14 @@ body {
 /* common in all sections - links */
 
 a:link{
+    color: blue;
     text-decoration: none;
+}
+
+a:visited {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
 }
 
 /* main container in all sections */
@@ -105,6 +112,18 @@ a:link{
     margin-left: 11rem;
 }
 
+.home-block2 {
+    width: 30%;
+    text-align: center;
+    background-color: #282828;
+    color: white;
+    padding: 1%;
+    box-sizing: border-box;
+    border-radius: 15px;
+    margin: auto;
+    margin-top: 10px;
+}
+
 .button {
     display: inline-block;
     padding: 10px 20px;
@@ -131,7 +150,8 @@ a:link{
 
 .block1 {
     width: 48%;
-    background-color: #e5e5e5;
+    color: white;
+    background-color: #282828;
     padding: 2%;
     box-sizing: border-box;
     border: 10px;
@@ -142,7 +162,8 @@ a:link{
 
 .block2 {
     width: 30%;
-    background-color: #e5e5e5;
+    color: white;
+    background-color: #282828;
     padding: 2%;
     box-sizing: border-box;
     border: 10px;
@@ -153,7 +174,8 @@ a:link{
 
 .block3 {
     width: 48%;
-    background-color: #e5e5e5;
+    color: white;
+    background-color: #282828;
     padding: 2%;
     box-sizing: border-box;
     border: 10px;
@@ -191,10 +213,10 @@ a:link{
 
 .courses-blocks {
     width: 100%;
-    background-color: #e5e5e5;
+    color: white;
+    background-color: #282828;
     padding: 1%;
     box-sizing: border-box;
-    border: 10px;
     border-radius: 10px;
     align: center;
     margin: auto;
@@ -212,7 +234,16 @@ a:link{
     box-sizing: border-box;
     border-radius: 20px;
 }
-
+.resources{
+    width: 100%;
+    color: white;
+    background-color: #282828;
+    padding: 1%;
+    box-sizing: border-box;
+    border-radius: 10px;
+    align: center;
+    margin: auto;
+}
 /* contact section */
 
 /* contact section - social media button */
