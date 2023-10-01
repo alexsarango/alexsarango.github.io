@@ -57,7 +57,7 @@ body {
 /* common in all sections - links */
 
 a:link{
-    color: blue;
+    color: white;
     text-decoration: none;
 }
 
@@ -67,63 +67,54 @@ a:visited {
   text-decoration: none;
 }
 
+a:hover {
+  text-decoration: underline;
+}
+
 /* main container in all sections */
 
 .container {
-    width: 100%;
-    max-width: 100%;
-    margin: auto;
-    overflow: hidden;
+    display:flex;
+    align-elements:center;
+}
+
+/* Collapse in all sections */
+
+.collapsible {
+  background-color: #282828;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 20px;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
 }
 
 /* home section */
 
 .top-home-container {
+    box-sizing: border-box;
+    border-radius: 20px;
     background-image: url("img/stars.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    align: center;
-    text-color: white;
+    height:530px;
     width: 100%;
-    box-sizing: border-box;
-    border-radius: 20px;
-}
-
-.home-block1 {
-    display: flex;
-    width: 70%;
-    background-color: #282828;
     color: white;
-    padding: 1%;
-    box-sizing: border-box;
-    border-radius: 15px;
-    margin: auto;
-    box-shadow: 0 5px 5px rgba(0,0,0,0.5);
-}
-
-.text-introduction {
-    width: 50%;
-    margin-left: 2rem;
-    text-align: justify;
-}
-
-.profile-photo {
-    width: 25%;
-    position: relative;
-    margin-left: 11rem;
-}
-
-.home-block2 {
-    width: 30%;
     text-align: center;
+}
+
+.block {
     background-color: #282828;
     color: white;
-    padding: 1%;
+    padding: 2%;
     box-sizing: border-box;
     border-radius: 15px;
-    margin: auto;
-    margin-top: 10px;
     box-shadow: 0 5px 5px rgba(0,0,0,0.5);
+    margin: auto;
 }
 
 .button {
@@ -143,91 +134,12 @@ a:visited {
     background-image: url("img/moonlight.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    align: center;
-    text-color: white;
+    color: white;
     width: 100%;
+    height:530px;
     box-sizing: border-box;
     border-radius: 20px;
-}
-
-.block1 {
-    width: 48%;
-    color: white;
-    background-color: #282828;
-    padding: 2%;
-    box-sizing: border-box;
-    border: 10px;
-    border-radius: 8px;
-    float: left;
-    margin: 1%;
-    box-shadow: 0 5px 5px rgba(0,0,0,0.5);
-}
-
-.block2 {
-    width: 30%;
-    color: white;
-    background-color: #282828;
-    padding: 2%;
-    box-sizing: border-box;
-    border: 10px;
-    border-radius: 8px;
-    align: center;
-    margin: 2%;
-}
-
-.block3 {
-    width: 48%;
-    color: white;
-    background-color: #282828;
-    padding: 2%;
-    box-sizing: border-box;
-    border: 10px;
-    border-radius: 8px;
-    float: right;
-    margin: 1%;
-    box-shadow: 0 5px 5px rgba(0,0,0,0.5);
-}
-
-.quotes {
-    width: 100%
-    height: 300px;
-    padding: 50px 40px;
-    background-color: #282828;
-    border-radius: 15px;
-    box-shadow: 0 5px 5px rgba(0,0,0,0.5);
-}
-
-.text-area {
     text-align: center;
-    font-size: 25px;
-    color: white;
-    line-height: 1.5;
-}
-
-.quotes .writer {
-    text-transform: uppercase;
-    letter-spacing: 5px;
-    color: white;
-    text-align: center;
-    margin-top: 20px;
-    font-size 25px;
-}
-
-.quotes .button-area {
-    display: grid;
-    place-items: center;
-    margin-top: 20px;
-    padding: 10px 0;
-}
-
-.button-area .btn button {
-    background-color: #282828;
-    color: white;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    outline: none;
-    padding: 12px 15px;
 }
 
 /* notes section */
@@ -236,11 +148,12 @@ a:visited {
     background-image: url("img/notebook.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    align: center;
-    text-color: white;
+    text-align: center;
+    color: white;
     width: 100%;
     box-sizing: border-box;
     border-radius: 20px;
+    height: 530px;
 }
 
 
@@ -250,23 +163,24 @@ a:visited {
     background-image: url("img/blackboard.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    align: center;
-    text-color: white;
+    text-align: center;
+    color: white;
     width: 100%;
     box-sizing: border-box;
     border-radius: 20px;
+    height: 530px;
 }
 
-.courses-blocks {
-    width: 100%;
-    color: white;
+.latex-course {
     background-color: #282828;
-    padding: 1%;
+    color: white;
+    padding: 2%;
     box-sizing: border-box;
-    border-radius: 10px;
-    align: center;
-    margin: auto;
+    border-radius: 15px;
     box-shadow: 0 5px 5px rgba(0,0,0,0.5);
+    margin: auto;
+    display: none;
+    overflow: hidden;
 }
 
 /* resources section*/
@@ -275,8 +189,9 @@ a:visited {
     background-image: url("img/formulas.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    align: center;
-    text-color: white;
+    text-align: center;
+    color: white;
+    height: 530px;
     width: 100%;
     box-sizing: border-box;
     border-radius: 20px;
@@ -325,7 +240,7 @@ a:visited {
 /* phone view */
 
 @media screen and (max-width: 5.4in){
-    .home-block1 {
+    .block {
         width: 100%;
     }
     .text-introduction {

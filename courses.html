@@ -16,41 +16,47 @@
      </div>
 </head>
 <body>
-    <div class="main-container">
-        <div class="top-courses-container">
-            <div style="color:white; height:530px;">
-                <h1 style="text-shadow: 4px 4px #080808; transform:translate(0, 200%);">Courses Made <br> by Myself</h1>
-            </div>
-        </div>
-        <br>
+    <div class="top-courses-container">
+        <h1 style="text-shadow: 4px 4px #080808; position:relative; top:50%;">Courses Made by Myself</h1>
     </div>
-    <div class="container">
-        <div>
-            <h3>Upcoming Courses</h3>
-            <div class="courses-blocks"></div>
-        <div>
-            <h3>Past Courses</h3>
-        </div>
-        <div class="courses-blocks">
-            <h3 lang="es">Introducción a LaTeX</h3>
-            <h4 lang="es">Descripción:</h4>
-            <p lang="es">El objetivo de este curso es instruir al estudiante con las nociones básicas para programar en
-                LaTeX de forma que podrá conocer las ventajas que ofrece esta poderosa herramiento de trabajo. El curso
-                se centrará en la creación de documentos de tipo artículo mediante la plataforma Overleaf; editor de
-                LaTeX online. Finalmente, el estudiante tendrá la oportunidad de crear su propio informe de
-                investigación académico sobre un tema de carácter científico.</p>
-            <a href="latex-course.html">Más información</a><br>
-            <br>
-            <a href="latex-course/Poster.pdf" target="_blank" style="color:white;">Póster</a>
-            <br>
-            <br>
-            <img src="img/latex-meme.jpeg" class="center">
-            <br>
-        </div>
-        </div>
+    <h3>Upcoming Courses</h3>
+    <div class="block"></div>
+    <h3>Past Courses</h3>
+    <button type="button" class="collapsible"><h3 lang="es">Introducción a LaTeX</h3></button>
+    <div class="latex-course">
+        <h4 lang="es">Descripción:</h4>
+        <p lang="es" style="text-align:justify;">
+            El objetivo de este curso es instruir al estudiante con las nociones básicas para programar en
+            LaTeX de forma que podrá conocer las ventajas que ofrece esta poderosa herramiento de trabajo.
+            El curso se centrará en la creación de documentos de tipo artículo mediante la plataforma
+            Overleaf; editor de LaTeX online. Finalmente, el estudiante tendrá la oportunidad de crear su
+            propio informe de investigación académico sobre un tema de carácter científico.
+        </p>
+        <a href="latex-course.html">Más información</a><br>
+        <br>
+        <a href="latex-course/Poster.pdf" target="_blank" style="color:white;">Póster</a>
+        <br>
+        <br>
+        <img src="img/latex-meme.jpeg" class="center">
     </div>
     <div>
         <p style="text-align: center;">&copy; 2023 Alexander Sarango</p>
     </div>
+    <script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+          content.style.display = "none";
+        } else {
+          content.style.display = "block";
+        }
+      });
+    }
+</script>
 </body>
 </html>
