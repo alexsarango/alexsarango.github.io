@@ -6,57 +6,83 @@
     <title>Alexander Sarango</title>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" type="image/png" href="img/favicon.png">
-     <div class="topnav">
-         <a href="index.html">Home</a>
-         <a href="aboutme.html">About Me</a>
-         <a href="notes.html">Notes</a>
-         <a class="active" href="courses.html">Courses</a>
-         <a href="resources.html">Resources</a>
-         <a href="contact.html">Contact</a>
-     </div>
 </head>
 <body>
-    <div class="top-courses-container">
-        <h1 class="text-banner">Courses Made by Myself</h1>
+    <div>
+         <div class="wave"></div>
+         <div class="wave"></div>
+         <div class="wave"></div>
     </div>
-    <h3>Upcoming Courses</h3>
-    <div class="block"></div>
-    <h3>Past Courses</h3>
-    <button type="button" class="collapsible"><h3 lang="es">Introducción a LaTeX</h3></button>
-    <div class="latex-course">
-        <h4 lang="es">Descripción:</h4>
-        <p lang="es" style="text-align:justify;">
-            El objetivo de este curso es instruir al estudiante con las nociones básicas para programar en
-            LaTeX de forma que podrá conocer las ventajas que ofrece esta poderosa herramiento de trabajo.
-            El curso se centrará en la creación de documentos de tipo artículo mediante la plataforma
-            Overleaf; editor de LaTeX online. Finalmente, el estudiante tendrá la oportunidad de crear su
-            propio informe de investigación académico sobre un tema de carácter científico.
-        </p>
-        <a href="latex-course.html">Más información</a><br>
-        <br>
-        <a href="latex-course/Poster.pdf" target="_blank" style="color:white;">Póster</a>
-        <br>
-        <br>
-        <img src="img/latex-meme.jpeg" class="center" style="width:30%;">
+    <div class="nav">
+        <a href="index.html">Home</a>
+        <a href="outreach.html">Outreach</a>
+        <a class="active" href="courses.html">Courses</a>
+        <a href="contact.html">Contact</a>
+    </div>
+    <h1 class="subtitle">COURSES</h1>
+    <div class="cont">
+        <div class="block">
+            <p class="main">
+                I'm happy to share with people what I really like to do. You can check the material of past courses
+                or stay tuned for upcoming courses.
+            </p>
+        </div>
+    </div>
+    <h2>Upcoming Courses</h2>
+    <div class="cont">
+        <div class="block">
+            ...
+        </div>
+    </div>
+    <h2>Past Courses</h2>
+    <div class="cont">
+        <div class="block">
+            <button type="button" class="collapsible"><h3 lang="es">Introducción a LaTeX</h3></button>
+            <div class="latex-course">
+                <h4 lang="es">Descripción:</h4>
+                <p lang="es" style="text-align:justify;">
+                El objetivo de este curso es instruir al estudiante con las nociones básicas para programar en
+                LaTeX de forma que podrá conocer las ventajas que ofrece esta poderosa herramiento de trabajo.
+                El curso se centrará en la creación de documentos de tipo artículo mediante la plataforma
+                Overleaf; editor de LaTeX online. Finalmente, el estudiante tendrá la oportunidad de crear su
+                propio informe de investigación académico sobre un tema de carácter científico.</p>
+                <a href="latex-course.html">Más información</a><br>
+                <br>
+                <a href="latex-course/Poster.pdf" target="_blank" style="color:white;">Póster</a>
+                <br>
+                <br>
+                <img src="img/latex-meme.jpeg" class="center" style="width:30%;">
+            </div>
+        </div>
     </div>
     <footer>
-        <p>&copy; 2023 Alexander Sarango</p>
+        <p>&copy; 2024 Alexander Sarango</p>
     </footer>
     <script>
-    var coll = document.getElementsByClassName("collapsible");
-    var i;
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
 
-    for (i = 0; i < coll.length; i++) {
-      coll[i].addEventListener("click", function() {
-        this.classList.toggle("active");
-        var content = this.nextElementSibling;
-        if (content.style.display === "block") {
-          content.style.display = "none";
-        } else {
-          content.style.display = "block";
+        for (i = 0; i < coll.length; i++) {
+          coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.display === "block") {
+              content.style.display = "none";
+            } else {
+              content.style.display = "block";
+            }
+          });
         }
-      });
-    }
-</script>
+        const navEl = document.querySelector('.nav');
+
+        window.addEventListener('scroll',() => {
+            if (window.scrollY > 50) {
+                navEl.classList.add('nav-scrolled');
+            }
+            else if (window.scrollY <= 50) {
+                navEl.classList.remove('nav-scrolled');
+            }
+        });
+    </script>
 </body>
 </html>

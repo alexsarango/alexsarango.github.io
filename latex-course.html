@@ -6,19 +6,23 @@
     <title>Alexander Sarango</title>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" type="image/png" href="img/favicon.png">
-     <div class="topnav">
-         <a href="index.html">Home</a>
-         <a href="aboutme.html">About Me</a>
-         <a href="notes.html">Notes</a>
-         <a class="active" href="courses.html">Courses</a>
-         <a href="resources.html">Resources</a>
-         <a href="contact.html">Contact</a>
-     </div>
 </head>
 <body>
+    <div>
+         <div class="wave"></div>
+         <div class="wave"></div>
+         <div class="wave"></div>
+    </div>
+    <div class="nav">
+        <a href="index.html">Home</a>
+        <a href="outreach.html">Outreach</a>
+        <a class="active" href="courses.html">Courses</a>
+        <a href="contact.html">Contact</a>
+    </div>
     <h1>Curso: Introducción a LaTeX</h1>
-    <div class="block">
-        <h3>Descripción:</h3>
+    <div class="cont">
+        <div class="block">
+        <h3>Descripción</h3>
         <p>
             El objetivo de este curso es instruir al estudiante con las nociones básicas para programar en
             LaTeX de forma que podrá conocer las ventajas que ofrece esta poderosa herramiento de trabajo. El curso
@@ -26,10 +30,11 @@
             LaTeX online. Finalmente, el estudiante tendrá la oportunidad de crear su propio informe de
             investigación académico sobre un tema de carácter científico. Mas información <a href="latex-course/Introduccion-a-Latex.pdf" target="_blank" style="color:white;"><i>aquí</i></a>
         </p>
+        </div>
     </div>
-    <br>
-    <div class="block">
-        <h3>Contenido del curso:</h3>
+    <div class="cont">
+        <div class="block">
+        <h3>Contenido del curso</h3>
         <ol>
             <li>Introducción a Overleaf y LaTeX (<a href="latex-course/01.pdf" target="_blank" style="color:white;"><i>Diapositivas</i></a>)</li>
             <li>Estructura de un documento (<a href="latex-course/02.pdf" target="_blank" style="color:white;"><i>Diapositivas</i></a>)</li>
@@ -39,9 +44,22 @@
             <li>Hipervínculos y fuentes de información en internet (<a href="latex-course/06.pdf" target="_blank" style="color:white;"><i>Diapositivas</i></a>)</li>
             <li>Crear tu propio informe de investigación académico</li>
         </ol>
+        </div>
     </div>
     <footer>
-        <p>&copy; 2023 Alexander Sarango</p>
+        <p>&copy; 2024 Alexander Sarango</p>
     </footer>
+    <script>
+        const navEl = document.querySelector('.nav');
+
+        window.addEventListener('scroll',() => {
+            if (window.scrollY > 50) {
+                navEl.classList.add('nav-scrolled');
+            }
+            else if (window.scrollY <= 50) {
+                navEl.classList.remove('nav-scrolled');
+            }
+        });
+    </script>
 </body>
 </html>

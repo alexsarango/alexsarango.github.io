@@ -6,25 +6,24 @@
     <title>Alexander Sarango</title>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" type="image/png" href="img/favicon.png">
-    <div class="topnav">
-         <a class="active" href="home.html">Home</a>
-         <a href="aboutme.html">About Me</a>
-         <a href="notes.html">Notes</a>
-         <a href="courses.html">Courses</a>
-         <a href="resources.html">Resources</a>
-         <a href="contact.html">Contact</a>
-    </div>
 </head>
 <body>
-    <div class="top-home-container">
-        <h1 class="text-banner">Alexander Sarango</h1>
+    <div class="nav">
+        <a class="active" href="">Home</a>
+        <a href="outreach.html">Outreach</a>
+        <a href="courses.html">Courses</a>
+        <a href="contact.html">Contact</a>
     </div>
-    <br>
+    <div>
+         <div class="wave"></div>
+         <div class="wave"></div>
+         <div class="wave"></div>
+    </div>
+    <h1 class="subtitle">ALEXANDER SARANGO</h1>
     <div class="cont">
-        <div class="text-introduction">
-            <h2>Hi!</h2>
-            <p style="text-align:justify; color:white; width:100%; font-size:20px;">
-            I'm a current physics bachelor's student at the <a href="https://espoch.edu.ec" target="_blank">Higher
+        <div class="block">
+            <p class="main">
+            Hi! I'm a current physics bachelor's student at the <a href="https://espoch.edu.ec" target="_blank">Higher
             Polytechnic School of Chimborazo</a> (ESPOCH), Ecuador. The design of this website goes beyond than
             just being an attempt for improving my HTML/CSS skills (haha). I'd like to help people by providing
             some notes I've created from my classes, from some good books and from video lectures from different
@@ -32,12 +31,12 @@
             Mathematics. You can feel free to explore and learn what I do and what I'm interested in.
             </p>
         </div>
-        <div class="profile-photo">
-            <img src="img/profile.jpg" class="photo">
-        </div>
-        <div class="cv-block">
+        <img src="img/profile.jpg" class="photo">
+    </div>
+    <div class="cont">
+        <div class="block" style="width:30%;">
             <p style="text-align:center; display:block; font-size:18px;">
-                You can download my academic CV by pressing the next button
+                You can download my academic CV
             </p>
             <a class="button" href="Alexander-Sarango-CV.pdf" target="_blank">Download CV</a>
         </div>
@@ -47,7 +46,19 @@
         (page under construction)
     </div>
     <footer>
-        <p>&copy; 2023 Alexander Sarango</p>
+        <p>&copy; 2024 Alexander Sarango</p>
     </footer>
+    <script>
+        const navEl = document.querySelector('.nav');
+
+        window.addEventListener('scroll',() => {
+            if (window.scrollY > 50) {
+                navEl.classList.add('nav-scrolled');
+            }
+            else if (window.scrollY <= 50) {
+                navEl.classList.remove('nav-scrolled');
+            }
+        });
+    </script>
 </body>
 </html>

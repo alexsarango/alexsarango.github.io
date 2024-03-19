@@ -7,20 +7,24 @@
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" type="image/png" href="img/favicon.png">
     <script src="https://kit.fontawesome.com/74c3f8628a.js" crossorigin="anonymous"></script>
-     <div class="topnav">
-         <a href="index.html">Home</a>
-         <a href="aboutme.html">About Me</a>
-         <a href="notes.html">Notes</a>
-         <a href="courses.html">Courses</a>
-         <a href="resources.html">Resources</a>
-         <a class="active" href="contact.html">Contact</a>
-     </div>
 </head>
 <body>
-    <br>
-    <div class="block">
-        <h2>Contact Me</h2>
-        <p>You can reach me on either of these social media channels or simply e-mail me at <a href=mailto:alexandersarango@gmail.com" target="_blank">alexandersarango@gmail.com</a>.</p>
+    <div>
+         <div class="wave"></div>
+         <div class="wave"></div>
+         <div class="wave"></div>
+    </div>
+    <div class="nav">
+        <a href="index.html">Home</a>
+        <a href="outreach.html">Outreach</a>
+        <a href="courses.html">Courses</a>
+        <a class="active" href="contact.html">Contact</a>
+    </div>
+    <h1 class="subtitle">CONTACT ME</h1>
+    <div class="cont">
+        <div class="block">
+            <p>You can reach me on either of these social media channels or simply e-mail me at <a href=mailto:alexandersarango@gmail.com" target="_blank">alexandersarango@gmail.com</a>.</p>
+        </div>
     </div>
     <br>
     <div>
@@ -43,7 +47,19 @@
         </div>
     </div>
     <footer>
-        <p>&copy; 2023 Alexander Sarango</p>
+        <p>&copy; 2024 Alexander Sarango</p>
     </footer>
+    <script>
+        const navEl = document.querySelector('.nav');
+
+        window.addEventListener('scroll',() => {
+            if (window.scrollY > 50) {
+                navEl.classList.add('nav-scrolled');
+            }
+            else if (window.scrollY <= 50) {
+                navEl.classList.remove('nav-scrolled');
+            }
+        });
+    </script>
 </body>
 </html>
