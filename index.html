@@ -8,57 +8,79 @@
     <link rel="shortcut icon" type="image/png" href="img/favicon.png">
 </head>
 <body>
-    <div class="nav">
-        <a class="active" href="">Home</a>
+    <header class="nav">
+        <a class="active" id="underline-gap" href="index.html">Home</a>
         <a href="outreach.html">Outreach</a>
         <a href="courses.html">Courses</a>
         <a href="contact.html">Contact</a>
-    </div>
-    <div>
-         <div class="wave"></div>
-         <div class="wave"></div>
-         <div class="wave"></div>
-    </div>
-    <h1 class="subtitle">ALEXANDER SARANGO</h1>
+        <button id="theme-switch">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Z"/></svg>
+        </button>
+    </header>
+    <h1 id="underline-gap">ALEXANDER SARANGO</h1>
     <div class="cont">
-        <div class="block">
-            <p class="main">
-            Hi! I'm a current physics bachelor's student at the <a href="https://espoch.edu.ec" target="_blank">Higher
-            Polytechnic School of Chimborazo</a> (ESPOCH), Ecuador. The design of this website goes beyond than
-            just being an attempt for improving my HTML/CSS skills (haha). I'd like to help people by providing
-            some notes I've created from my classes, from some good books and from video lectures from different
-            people, also you can see all the free resources I found useful about some topics in Physics and
-            Mathematics. You can feel free to explore and learn what I do and what I'm interested in.
+        <div class="two-col">
+            <p class="main-text">
+                Hi! I'm a current undergraduate student in physics at the <a href="https://espoch.edu.ec" target="_blank">Higher
+                Polytechnic School of Chimborazo</a> (ESPOCH) in Riobamba, Ecuador. I've designed this website for
+                improving my HTML/CSS skills and the most important, for helping young students who are working towards a
+                bachelor's degree in any scientific field. Here you can find some notes I've created from my classes,
+                from some good books and from video lectures from different people, also you can see all the free
+                resources I found useful about some topics in Physics and Mathematics. You can feel free to explore
+                and learn what I do and what I'm interested in.
             </p>
         </div>
-        <img src="img/profile.jpg" class="photo">
-    </div>
-    <div class="cont">
-        <div class="block" style="width:30%;">
-            <p style="text-align:center; display:block; font-size:18px;">
-                You can download my academic CV
-            </p>
-            <a class="button" href="Alexander-Sarango-CV.pdf" target="_blank">Download CV</a>
+        <div class="two-col">
+            <img class="home-photo" src="img/moon.jpg">
+            <figcaption>Credits: @holbin_</figcaption>
         </div>
     </div>
-    <div style="text-align:center;">
-        <br>
-        (page under construction)
+    <div class="cont">
+        <div class="two-col">
+            <img class="profile-photo" src="img/profile.jpg">
+        </div>
+        <div class="two-col">
+            <h3>About Me</h3>
+            <p>
+                I was born in Loja, Ecuador but, I grew up for almost 14 years in Elche, Spain. Then, I return to Ecuador.
+                I enjoy doing sports, playing video games and spreading my passion for physics and computer science with
+                others.
+            </p>
+            <p>
+                My interests in physics are:
+                <ul>
+                    <li>Black holes in general relativity, holographic principle, dark matter, gravastars, quantum
+                        mechanics, quantum information theory.</li>
+                </ul>
+            </p>
+            <p>
+                My interests in computer science are:
+                <ul>
+                    <li>Machine learning, big data, quantum computing, cybersecurity.</li>
+                </ul>
+            </p>
+        </div>
     </div>
+    <div class="cont">
+        <div class="three-col">
+            <p class="text-button"> Check out some materials if you need!</p>
+            <a class="button" href="outreach.html" target="_self">CLICK HERE</a>
+        </div>
+        <div class="three-col">
+            <p class="text-button"> You can download my academic CV </p>
+            <a class="button" href="Alexander-Sarango-CV.pdf" target="_blank">DOWNLOAD</a>
+        </div>
+        <div class="three-col">
+            <p class="text-button"> Check out my last courses! </p>
+            <a class="button" href="courses.html" target="_self">CLICK HERE</a>
+        </div>
+    </div>
+    <br>
+    <br>
     <footer>
-        <p>&copy; 2024 Alexander Sarango</p>
+        &copy; 2024 Alexander Sarango
     </footer>
-    <script>
-        const navEl = document.querySelector('.nav');
-
-        window.addEventListener('scroll',() => {
-            if (window.scrollY > 50) {
-                navEl.classList.add('nav-scrolled');
-            }
-            else if (window.scrollY <= 50) {
-                navEl.classList.remove('nav-scrolled');
-            }
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>

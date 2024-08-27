@@ -9,57 +9,44 @@
     <script src="https://kit.fontawesome.com/74c3f8628a.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div>
-         <div class="wave"></div>
-         <div class="wave"></div>
-         <div class="wave"></div>
-    </div>
-    <div class="nav">
+    <header class="nav">
         <a href="index.html">Home</a>
         <a href="outreach.html">Outreach</a>
         <a href="courses.html">Courses</a>
-        <a class="active" href="contact.html">Contact</a>
-    </div>
-    <h1 class="subtitle">CONTACT ME</h1>
+        <a class="active" id="underline-gap" href="contact.html">Contact</a>
+        <button id="theme-switch">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Z"/></svg>
+        </button>
+    </header>
+    <h1 id="underline-gap">CONTACT ME</h1>
     <div class="cont">
-        <div class="block">
+        <div>
             <p>You can reach me on either of these social media channels or simply e-mail me at <a href=mailto:alexandersarango@gmail.com" target="_blank">alexandersarango@gmail.com</a>.</p>
         </div>
     </div>
     <br>
-    <div>
-        <div class="flex-center">
-            <a href="https://twitter.com/aleexsarango" target="_blank">
-                <i class="fa fa-twitter fa-2x icon-3d"></i>
-            </a>
-            <a href="https://instagram.com/aleexsarango" target="_blank">
-                <i class="fa fa-instagram fa-2x icon-3d"></i>
-            </a>
-            <a href="https://github.com/alexsarango" target="_blank">
-                <i class="fa fa-github fa-2x icon-3d"></i>
-            </a>
-            <a href="https://open.spotify.com/user/alexandersarango" target="_blank">
-                <i class="fa fa-spotify fa-2x icon-3d"></i>
-            </a>
-            <a href="https://linkedin.com/in/alexander-sarango" target="_blank">
-                <i class="fa fa-linkedin fa-2x icon-3d"></i>
-            </a>
-        </div>
+    <div class="flex-center">
+        <a href="https://twitter.com/aleexsarango" class="icon">
+            <i class="fa-brands fa-x-twitter"></i>
+        </a>
+        <a href="https://instagram.com/aleexsarango" class="icon">
+            <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="https://github.com/alexsarango" class="icon">
+            <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="https://open.spotify.com/user/alexandersarango" class="icon">
+            <i class="fa-brands fa-spotify"></i>
+        </a>
+        <a href="https://linkedin.com/in/alexander-sarango" class="icon">
+            <i class="fa-brands fa-linkedin"></i>
+        </a>
     </div>
+    <div style="flex: 1 1 auto;"></div>
     <footer>
-        <p>&copy; 2024 Alexander Sarango</p>
+        &copy; 2024 Alexander Sarango
     </footer>
-    <script>
-        const navEl = document.querySelector('.nav');
-
-        window.addEventListener('scroll',() => {
-            if (window.scrollY > 50) {
-                navEl.classList.add('nav-scrolled');
-            }
-            else if (window.scrollY <= 50) {
-                navEl.classList.remove('nav-scrolled');
-            }
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
