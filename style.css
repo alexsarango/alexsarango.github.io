@@ -1,4 +1,5 @@
 /* body */
+
 body {
     font-family: monospace;
     background-color: var(--base-color);
@@ -25,7 +26,7 @@ body {
     --base-variant: #101425;
     --text-color: #fff;
     --secondary-text: #a4a5b8;
-    --primary-color: #3a435d;
+    --primary-color: #7082b9;
     --accent-color: #0071ff;
 }
 
@@ -63,37 +64,81 @@ figcaption {
   color: var(--text-color);
   font-style: italic;
   text-align: center;
+  animation: fadein 0.7s;
+  margin-top: 10px;
 }
 
-/* top navigator */
+/* navigator bar */
 
-.nav {
-    padding: 0px 20px 0px 20px;
-    box-sizing: border-box;
-    top: 0px;
+.navbar {
+    height: 4rem;
     width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    position: fixed;
     transition: all 0.5s;
-    position: sticky;
 }
-.nav-scrolled {
-  background-color: rgb(70, 130, 180);
-  box-shadow: 0 3px 10px rgba(0,0,0,0.15);
-}
-
-.nav a {
-    display: inline-block;
-    position: relative;
-    text-align: center;
-    padding: 14px 16px;
-    font-size: 20px;
-    font-family: monospace;
-    box-sizing: border-box;
-    border-radius: 10px;
-}
-
-.nav a.active {
-    text-decoration: underline;
+  
+.logo {
     color: var(--text-color);
+    font-size: 2rem;
+    margin-top: 10px;
+    margin-left: 30px;
+    margin-bottom: 10px;
+}
+
+  
+.nav-menu ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+  
+.nav-menu ul li {
+    list-style: none;
+}
+  
+.nav-menu ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+    padding: 1rem;
+    display: block;
+    font-size: 1.5rem;
+}
+  
+.nav-menu li:hover {
+    opacity: 0.9;
+}
+  
+.hamburger {
+    width: 1.875rem;
+    height: 1.313rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+  
+.hamburger-line {
+    height: 0.188rem;
+    width: 100%;
+    background-color: var(--text-color);
+    border-radius: 0.625rem;
+    transition: all ease-in-out 0.2s;
+}
+
+.nav-scrolled {
+    background-color: rgb(70, 130, 180);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+}
+
+#toggle-button {
+    border: none;
+    background: transparent;
 }
 
 /* common in all sections */
@@ -103,26 +148,31 @@ figcaption {
 #underline-gap {
     text-decoration: underline;
     text-underline-position: under;
-  }
+    color: var(--text-color);
+}
 
 .cont {
     display: flex;
     align-items: center;
     width: 100%;
+    animation: fadein .7s;
 }
 
-.main-text{
+.main-text {
     font-size: 23px;
-    padding: 10px 30px 10px 30px;
+    color: var(--text-color);
+    margin: 20px 20px 20px 20px;
+    padding: 0px 10px 0px 10px;
     text-align: justify;
+    animation: fadein .7s;
 }
 
-.two-col{
+.two-col {
     width: 50%;
     padding: 10px 30px 10px 30px;
 }
 
-.three-col{
+.three-col {
     width: 100%;
     text-align: center;
     align-items: center;
@@ -167,34 +217,39 @@ p.text-button{
 }
 
 h1 {
-    text-color: var(--primary-color);
+    color: var(--text-color);
     font-family: monospace;
     font-size: 40px;
-    padding: 20px 0px 20px 0px;
+    margin: 70px 0px 10px 0px;
     text-align: center;
     text-decoration: underline;
+    animation: fadein .7s;
 }
 
 h2 {
-    text-color: var(--primary-color);
+    color: var(--accent-color);
     font-family: monospace;
     padding: 15px 0px 15px 0px;
     font-size: 30px;
     text-align: center;
+    animation: fadein .7s;
 }
 
 h3 {
-    padding: 10px 10px 10px 10px;
-    text-color: var(--primary-color);
+    padding: 15px 10px 15px 10px;
+    color: var(--primary-color);
     font-family: monospace;
     font-size: 25px;
+    animation: fadein .7s;
 }
 
 h4 {
-    text-color: var(--primary-color);
+    margin: 15px 0px 15px 0px;
+    color: var(--primary-color);
     font-family: monospace;
     font-size: 20px;
     text-align: center;
+    animation: fadein .7s;
 }
 
 footer {
@@ -235,26 +290,37 @@ a:hover {
 
 /* home section */
 
+.waving-hand {
+    animation-name: wave-animation;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+    transform-origin: 70% 70%;
+    display: inline-block;
+}
+  
+
 .profile-photo {
     width: 50%;
     display: block;
     padding: 0px 20px 0px 20px;
     margin-left: auto;
     margin-right: auto;
+    animation: fadein 0.7s;
 }
 
 .home-photo{
     width:100%;
     display:block;
-    padding:0px 20px 0px 20px;
+    padding: 0px 20px 0px 20px;
     margin-left:auto;
     margin-right:auto;
+    animation: fadein 0.7s;
 }
 
 .outreach-photo{
-    width:88%;
+    width: 82%;
     display:block;
-    padding:0px 20px 0px 20px;
+    margin: 10px 50px 0px 20px;
     margin-left:auto;
     margin-right:auto;
 }
@@ -262,7 +328,7 @@ a:hover {
 .courses-photo{
     width: 100%;
     display: block;
-    padding: 20px 20px 20px 20px;
+    padding: 20px 20px 0px 20px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -280,7 +346,10 @@ a:hover {
     width: 50%;
 }
 
-.button:hover {background-color: rgb(70, 130, 180)}
+.button:hover {
+    background-color: rgb(70, 130, 180);
+    opacity: 0.7;
+}
 
 .button:active {
   background-color: rgb(70, 130, 180);
@@ -316,7 +385,6 @@ a:hover {
     width: 100%;
     height: 900px;
     background-color: var(--base-color);
-    margin-bottom: -50px;
 }
 
 .responsive-container iframe{
@@ -407,7 +475,6 @@ a:hover {
     box-sizing: border-box;
     border-radius: 15px;
     box-shadow: 0 5px 5px rgba(0,0,0,0.5);
-    margin 0px;
     width: 100%;
 }
 
@@ -421,32 +488,34 @@ a:hover {
 
 @media screen and (max-width: 961px){
     .cont {
-        display:inline;
-        width:100%;
-        gap:20px;
-        align-elements:center;
+        display: inline;
+        width: 100%;
+        gap: 20px;
     }
-    .two-col{
-        width:100%;
-        padding: 10px 10px 10px 10px;
+    .two-col {
+        width: 100%;
+        padding: 0px 10px 10px 10px;
     }
     .three-col{
         padding: 10px 0px 10px 0px;
     }
-    .main-text{
-        font-size: 20px;
-        padding: 10px 10px 10px 10px;
-        text-align: justify;
+    .two-col p {
+        font-size: 13px;
     }
-    .block {
-        width:100%;
-        align-elements:center;
+    .two-col ul li {
+        font-size: 12px;
+    }
+    .cont p {
+        font-size: 13px;
     }
     .profile-photo {
         display:none;
     }
-    .button {
-        align-elements:center;
+    .home-photo {
+        width:95%;
+    }
+    .outreach-photo {
+        width: 80%;
     }
     .flex-center {
         width: 100%;
@@ -455,6 +524,72 @@ a:hover {
         width: 100%;
     }
     .responsive-container{
-        width:100%;
+        width: 100%;
+        margin-bottom: 10px;
     }
+    .logo{
+        margin-top: 10px;
+        margin-left: 10px;
+        font-size: 1.5rem;
+    }
+    .hamburger {
+        display: flex;
+        color: var(--text-color);
+    }
+    .nav-menu {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        background-color:rgb(70, 130, 180);
+        top: -15rem;
+        width: 100%;
+        transition: all ease-in-out 0.4s;
+    }
+    .nav-menu ul {
+        flex-direction: column;
+        width: 100%;
+        padding: 3rem 0 0.6rem;
+    }
+    .nav-menu ul li {
+        text-align: center;
+    }
+    .nav-menu ul li a {
+        padding: 0.5rem;
+    }
+    .nav-menu {
+        z-index: -1;
+    }
+    .nav-menu.active {
+        top: 0;
+    }
+    .hamburger.active :nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active :nth-child(2) {
+        opacity:0;
+    }
+
+    .hamburger.active :nth-child(3) {
+        opacity:0;
+    }
+
+    .hamburger.active :nth-child(4) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
+
+@keyframes wave-animation {
+    0% { transform: rotate( 0.0deg) }
+    15% { transform: rotate(14.0deg) }  /* The following five values can be played with to make the waving more or less extreme */
+    30% { transform: rotate(-8.0deg) }
+    40% { transform: rotate(14.0deg) }
+    50% { transform: rotate(-4.0deg) }
+    60% { transform: rotate(10.0deg) }
+    70% { transform: rotate( 0.0deg) }  /* Reset for the last half to pause */
+   100% { transform: rotate( 0.0deg) }
+}
+
+@keyframes fadein {
+    from {scale:.5; opacity:0;}
+    to {scale:1; opacity:1;}
 }
