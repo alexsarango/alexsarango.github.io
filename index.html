@@ -2,95 +2,146 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alexander Sarango</title>
-    <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+    <script src="https://kit.fontawesome.com/74c3f8628a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="navbar">
-        <div class="logo">Alexander Sarango</div>
-        <button class="hamburger" id="toggle-button">
-          <span class="hamburger-line"></span>
-          <span class="hamburger-line"></span>
-          <span class="hamburger-line"></span>
-          <span class="hamburger-line"></span>
+    <nav class="nav">
+        <button class="menu-toggle">☰</button>
+        <ul class="nav-list">
+            <li><a href="#home" class="nav-link active">Home</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#notes" class="nav-link">Notes</a></li>
+            <li><a href="#outreach" class="nav-link">Outreach</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+        
+        <button id="theme-switch">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Z"/></svg>
         </button>
-        <div class="nav-menu">
-          <ul>
-            <li class="nav-menu-link" id="underline-gap"><a href="index.html">Home</a></li>
-            <li class="nav-menu-link"><a href="outreach.html">Outreach</a></li>
-            <li class="nav-menu-link"><a href="courses.html">Courses</a></li>
-            <li class="nav-menu-link"><a href="contact.html">Contact</a></li>
-          </ul>
+    </nav>
+
+    <section id="home">
+        <h1>Hi, I'm Alexander Sarango</h1>
+        <p>Physicist</p>
+    </section>
+
+    <section id="about">
+        <div class="about-container">
+            <div class="about-image">
+                <img src="img/profile.jpg">
+            </div>
+    
+            <div class="about-content">
+                <h2>About Me</h2>
+                <p style="text-align: justify;">I'm a current undergraduate student in physics at the Higher Polytechnic School of Chimborazo (ESPOCH) in Riobamba, Ecuador. I've designed this website for helping young students who are working towards a bachelor's degree in physics or any other scientific field. Here you can find some notes I've created from my classes, from some good books and from video lectures from different people, also you can see all the free resources I found useful about some topics in physics and mathematics. You can feel free to explore and learn what I do and what I'm interested in.</p>
+                <br>
+                <p style="text-align: justify;">I was born in Loja, Ecuador. I enjoy doing sports, playing video games and spreading my passion for physics and computer science with others.</p>
+                <br>
+                <p style="text-align: justify;">My interests in physics are: black holes, string theory and quantum mechanics.</p>
+                <br>
+                <p style="text-align: justify;">My interests in computer science are: machine learning, big data and data science.</p>
+
+                <div class="cv-buttons">
+                    <a href="files/CV_AlexanderSarango_EN.pdf" class="btn" target="_blank">
+                        Download CV
+                    </a>
+                    <a href="files/CV_AlexanderSarango_ES.pdf" class="btn" target="_blank">
+                        Download CV (Spanish)
+                    </a>
+                </div>
+            </div>
         </div>
-    </header>
-    <button id="theme-switch">
-        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Z"/></svg>
-        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Z"/></svg>
-    </button>
-    <h1 id="underline-gap">Hi!<span class="waving-hand">👋</span></h1>
-    <div class="cont">
-        <div class="two-col">
-            <p class="main-text">
-                I'm a current undergraduate student in physics at the <a href="https://espoch.edu.ec" target="_blank">Higher
-                Polytechnic School of Chimborazo</a> (ESPOCH) in Riobamba, Ecuador. I've designed this website for
-                improving my HTML/CSS skills and the most important, for helping young students who are working towards a
-                bachelor's degree in any scientific field. Here you can find some notes I've created from my classes,
-                from some good books and from video lectures from different people, also you can see all the free
-                resources I found useful about some topics in Physics and Mathematics. You can feel free to explore
-                and learn what I do and what I'm interested in.
-            </p>
-        </div>
-        <div class="two-col">
-            <img class="home-photo" src="img/moon.jpg">
-            <figcaption>Credits: @holbin_</figcaption>
-        </div>
-    </div>
-    <div class="cont">
-        <div class="two-col">
-            <img class="profile-photo" src="img/profile.jpg">
-        </div>
-        <div class="two-col">
-            <h3>About Me</h3>
-            <p>
-                I was born in Loja, Ecuador but, I grew up for almost 14 years in Elche, Spain. Then, I returned to Ecuador.
-                I enjoy doing sports, playing video games and spreading my passion for physics and computer science with
-                others.
-            </p>
-            <p>
-                My interests in physics are:
+    </section>
+    <section id="notes">
+        <h2>Notes</h2>
+        <div class="project-grid">
+            <div class="project-card">
+                <h3>Classical Mechanics</h3>
+                    <ul>
+                        <li><i>Upcoming...</i></li>
+                    </ul>
+            </div>
+            <div class="project-card">
+                <h3>Special & General Relativity</h3>
                 <ul>
-                    <li>Black holes in general relativity, holographic principle, dark matter, gravastars, quantum
-                        mechanics, quantum information theory.</li>
+                    <li>Schwarzschild solution derivation (<a href="files/Schwarzschild_Solution.pdf" target="_blank"><i>PFD</i></a>)</li>
                 </ul>
-            </p>
-            <p>
-                My interests in computer science are:
+            </div>
+            <div class="project-card">
+                <h3>Quantum Physics</h3>
                 <ul>
-                    <li>Machine learning, big data, quantum computing, cybersecurity.</li>
+                    <li><i>Upcoming...</i></li>
                 </ul>
-            </p>
+            </div>
+            <div class="project-card">
+                <h3>Vector & Tensor Calculus</h3>
+                    <ul>
+                        <li><i>Upcoming...</i></li>
+                    </ul>
+            </div>
+            <div class="project-card">
+                <h3>Calculus</h3>
+                    <ul>
+                        <li><i>Upcoming...</i></li>
+                    </ul>
+            </div>
+            <div class="project-card">
+                <h3>Electromagnetism</h3>
+                    <ul>
+                        <li><i>Upcoming...</i></li>
+                    </ul>
+            </div>
         </div>
-    </div>
-    <div class="cont">
-        <div class="three-col">
-            <p class="text-button"> Check out some materials!</p>
-            <a class="button" href="outreach.html" target="_self">CLICK HERE</a>
+    </section>
+    <section id="outreach">
+        <h2>Outreach</h2>
+        <div class="project-grid">
+            <div class="project-card">
+                <h3>Courses</h3>
+                    <ul>
+                        <li>Introduction to LaTeX (Spanish) (<a href="https://github.com/alexsarango/CursoLaTeX" target="_blank"><i>material</i></a>)</li>
+                    </ul>
+            </div>
+            <div class="project-card">
+                <h3>Talks</h3>
+                <ul>
+                    <li>Gravastars, the missing piece of the cosmic
+                        puzzle? (<a href="files/Lecture211124_Gravastar.pdf" target="_blank"><i>Slides</i></a>)</li>
+                </ul>
+            </div>
         </div>
-        <div class="three-col">
-            <p class="text-button"> You can download my academic CV </p>
-            <a class="button" href="files/Alexander-Sarango-CV.pdf" target="_blank">DOWNLOAD</a>
+    </section>
+    <section id="contact">
+        <h2>Get in Touch</h2>
+        <p>For any inquiry you can fill out the following form or reach me on either of the social media channels showed at the bottom.</p>
+        <div class="responsive-container">
+            <iframe class="responsive-container" src="https://docs.google.com/forms/d/e/1FAIpQLSex11WY5jnyrds8CRI4prahbgVuTgq-7RaY5ADe64N_EHLspQ/viewform?embedded=true">Loading…</iframe>
         </div>
-        <div class="three-col">
-            <p class="text-button"> Check out my last courses! </p>
-            <a class="button" href="courses.html" target="_self">CLICK HERE</a>
+        <div class="social-links">
+            <a href="https://twitter.com/aleexsarango" class="icon">
+                <i class="fa-brands fa-x-twitter"></i>
+            </a>
+            <a href="https://instagram.com/aleexsarango" class="icon">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://open.spotify.com/user/alexandersarango" class="icon">
+                <i class="fa-brands fa-spotify"></i>
+            </a>
+            <a href="https://github.com/alexsarango" class="icon">
+                <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="https://linkedin.com/in/alexander-sarango" class="icon">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
         </div>
-    </div>
-    <br>
-    <br>
+    </section>
     <footer>
-        &copy; 2024 Alexander Sarango
+        &copy; 2025 Alexander Sarango
     </footer>
     <script src="script.js"></script>
 </body>

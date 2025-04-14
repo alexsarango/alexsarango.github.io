@@ -1,43 +1,19 @@
-const navEl = document.querySelector(".navbar");
-const wavinghand = document.querySelector(".waving-hand");
+// Mobile Menu Toggle
 
-window.addEventListener('scroll',() => {
-    if (window.scrollY > 50) {
-        navEl.classList.add('nav-scrolled');
-    }
-    else if (window.scrollY <= 50) {
-        navEl.classList.remove('nav-scrolled');
-    }
+const menuToggle = document.querySelector('.menu-toggle');
+const navList = document.querySelector('.nav-list');
+
+menuToggle.addEventListener('click', () => {
+    navList.classList.toggle('active');
 });
 
-const hamburger = document.querySelector(".hamburger");
-const navMenu = document.querySelector(".nav-menu");
-const links = document.querySelectorAll(".nav-menu-link");
+// Close menu when clicking outside (mobile)
 
-hamburger.addEventListener("click", () => {
-    navMenu.classList.toggle("active");
-    hamburger.classList.toggle("active");
-    wavinghand.classList.remove('waving-hand');
-});
-
-window.addEventListener("resize", () => {
-    if (window.matchMedia("(max-width: 550px)").matches) {
-      closeMenu();
+document.addEventListener('click', (e) => {
+    if (!navList.contains(e.target) && !menuToggle.contains(e.target)) {
+        navList.classList.remove('active');
     }
 });
-
-if (window.matchMedia("(max-witdh: 550px").matches) {
-    closeMenu();
-}
-
-function closeMenu() {
-    links.forEach((link) => {
-      link.addEventListener("click", () => {
-        navMenu.classList.remove("active");
-        hamburger.classList.remove("active");
-      });
-    });
-}
 
 let darkmode = localStorage.getItem('darkmode');
 const themeSwitch = document.getElementById('theme-switch');
@@ -58,3 +34,39 @@ themeSwitch.addEventListener("click", () => {
     darkmode = localStorage.getItem('darkmode')
     darkmode !== "active" ? enableDarkmode() : disableDarkmode()
 })
+
+// Load saved theme
+
+if (localStorage.getItem('theme') === 'dark') {
+    document.body.classList.add('darkmode');
+    themeToggle.textContent = '🌞';
+}
+
+// Active Navigation Scroll
+
+const sections = document.querySelectorAll('section');
+const navLinks = document.querySelectorAll('.nav-link');
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            navLinks.forEach(link => link.classList.remove('active'));
+            const id = entry.target.getAttribute('id');
+            document.querySelector(`.nav-link[href="#${id}"]`).classList.add('active');
+        }
+    });
+}, { threshold: 0.5 });
+
+sections.forEach(section => observer.observe(section));
+
+// Smooth Scroll
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        target.scrollIntoView({ behavior: 'smooth' });
+        if (window.innerWidth <= 768) {
+            navList.classList.remove('active');
+        }
+    });
+});
