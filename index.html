@@ -6,7 +6,19 @@
     <title>Alexander Sarango</title>
     <link rel="shortcut icon" type="image/png" href="img/favicon.png">
     <script src="https://kit.fontawesome.com/74c3f8628a.js" crossorigin="anonymous"></script>
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+    </script>
+    <script type="text/javascript"
+    src="http://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="https://tikzjax.com/v1/fonts.css">
+    <script src="https://tikzjax.com/v1/tikzjax.js"></script>
 </head>
 <body>
     <nav class="nav">
@@ -14,7 +26,9 @@
         <ul class="nav-list">
             <li><a href="#home" class="nav-link active">Home</a></li>
             <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#research" class="nav-link">Research</a></li>
             <li><a href="#notes" class="nav-link">Notes</a></li>
+            <li><a href="teaching.html" class="nav-link">Teaching</a></li>
             <li><a href="#outreach" class="nav-link">Outreach</a></li>
             <li><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
@@ -25,27 +39,23 @@
         </button>
     </nav>
 
-    <section id="home">
-        <h1>Hi, I'm Alexander Sarango</h1>
+    <section id="home" class="home">
+        <h1>Hi! I'm Alexander Sarango</h1>
         <p>Physicist</p>
     </section>
 
     <section id="about">
         <div class="about-container">
             <div class="about-image">
-                <img src="img/profile.jpg">
+                <img src="img/blackhole-tikz.png">
             </div>
     
             <div class="about-content">
-                <h2>About Me</h2>
-                <p style="text-align: justify;">I'm a current undergraduate student in physics at the Higher Polytechnic School of Chimborazo (ESPOCH) in Riobamba, Ecuador. I've designed this website for helping young students who are working towards a bachelor's degree in physics or any other scientific field. Here you can find some notes I've created from my classes, from some good books and from video lectures from different people, also you can see all the free resources I found useful about some topics in physics and mathematics. You can feel free to explore and learn what I do and what I'm interested in.</p>
-                <br>
-                <p style="text-align: justify;">I was born in Loja, Ecuador. I enjoy doing sports, playing video games and spreading my passion for physics and computer science with others.</p>
-                <br>
-                <p style="text-align: justify;">My interests in physics are: black holes, string theory and quantum mechanics.</p>
-                <br>
-                <p style="text-align: justify;">My interests in computer science are: machine learning, big data and data science.</p>
-
+                <h2>ABOUT ME</h2>
+                <p style="text-align: justify;">I'm a dedicated graduate student in physics by <a href="https://www.espoch.edu.ec" target="_blank">Escuela Superior Politécnica de Chimborazo (ESPOCH)</a> in Riobamba, Ecuador. While exploring different areas of physics during my undergraduate years, I discovered a deep passion for computational and theoretical physics. I like to connect the theoretical elegance of nature phenomena with cutting-edge computational frameworks. I culminated my bachelor's degree with my thesis research on gravastars, an alternative theory with the aim of solving the problems of classical black holes. You can read more <a href="#research">here</a>.</p><br>
+                <p style="text-align: justify;">I was born in Loja, Ecuador. I enjoy doing sports, playing video games and spreading my passion for physics and computer science with others. I've designed this website for helping young students who are working towards a bachelor's degree in physics or any other scientific field. Here you can find some notes I've created from my classes, from some good books and from video lectures from different people, also you can see all the free resources I found useful about some topics in physics and mathematics. You can feel free to explore and learn what I do and what I'm interested in.</p><br>
+                <p style="text-align: justify;">My interests in physics are: black holes in general relativity, gravastars, quantum mechanics, holographic principle, string theory.</p><br>
+                <p style="text-align: justify;">My interests in computer science are: machine learning, artificial intelligent, big data and data science.</p>
                 <div class="cv-buttons">
                     <a href="files/CV_AlexanderSarango_EN.pdf" class="btn" target="_blank">
                         Download CV
@@ -57,55 +67,156 @@
             </div>
         </div>
     </section>
+
+    <section id="research">
+        <h2>RESEARCH</h2>
+        <div class="project-grid">
+            <div class="project-card">
+                <h3>Undergraduate Thesis: Gravastar Model with Vanishing Complexity</h3>
+                <div style="margin-top:1rem;margin-bottom:1rem;" align=center>
+                    <script type="text/tikz">
+                    \def\k{0.55191496}
+                    \tikzset{
+                    sphere color/.store in=\spherecolor,
+                    sphere scale/.store in=\spherescale,
+                    sphere color=blue,
+                    sphere scale=1,
+                    sphere/.style={
+                        ultra thick,
+                        line join=round,
+                        draw=#1!75!black,
+                        ball color=#1,
+                        },
+                    sphere inside/.style={
+                        shading angle=180,
+                        sphere=#1!25!gray!75!black
+                        }
+                    }
+                    \newenvironment{sphere}[1][]{
+                    \begin{scope}[x=(0:1cm), y=(90:1cm), z=(260:0.25cm), #1]
+                    \path [sphere inside=\spherecolor, scale=\spherescale] 
+                    circle [radius=1];}{
+                    \path let \n1={cos 10}, \n2={sin 10} in [sphere=\spherecolor, scale=\spherescale, even odd rule, opacity=1]
+                    circle [radius=1] 
+                    % Rotate 10 degrees around the y and x axes
+                    [x={(\n1, \n2^2, \n2*\n1)},
+                    y={(0, \n1, \n2)}, 
+                    z={(-\n2, -\n1*\n2, \n1^2)}] (0,1,0) 
+                    .. controls ++( 0, 0,\k) and ++(0,\k, 0) .. (0, 0, 1)
+                    .. controls ++(\k, 0, 0) and ++(0, 0,\k) .. (1, 0, 0) 
+                    .. controls ++(0, \k, 0) and ++(\k,0, 0) .. (0, 1, 0);
+                    \end{scope}}
+                    \begin{tikzpicture}[scale=.5]
+                    \begin{sphere}[sphere scale=3, sphere color=blue]   
+                    \end{sphere}
+                    \draw[fill=gray] (-.6,-1.2) to[in=-120,out=100] (0,2.9) to[in=90,out=0] (2.9,-.1) to[in=0,out=-130] (-.6,-1.2);
+                    \draw[stealth-,black, very thick] (1,0.5) -- ++(45:3) node[right] {\small BEC};
+                    \draw[black] (-3.5,2.7) node[above,align=center] {\large Schwarzschild};
+                    \draw[black] (-3.5,2) node[above,align=center] {\large exterior};
+                    \draw[stealth-,black, very thick] (-1,-1.4) -- ++(225:2.5) node[left] {\large thin shell};
+                    \draw (0.5,0) node[below] {\large $\Lambda>0$};
+                    \end{tikzpicture}
+                    </script>
+                </div>
+                <p style="text-align: justify;">The goal of this research was to develop a new gravastar model with vanishing complexity, a condition useful for the study of complex stellar objects. To achieve this, the methodology employed consisted of using extended minimal geometric deformation approach under the gravitational decoupling framework. Through this methodology, a new gravastar solution was obtained and it was demonstrated that this new solution satisfies the necessary conditions to be considered a physically acceptable solution.</p>
+                <div class="thesis-buttons">
+                    <a href="https://dspace.espoch.edu.ec/home" class="btn" target="_blank">
+                        Thesis
+                    </a>
+                    <a href="files/AlexanderSarango_ThesisSlides.pdf" class="btn" target="_blank">
+                        Thesis Slides
+                    </a>
+                </div>
+            </div>
+            <div class="project-card">
+                <h3>Grupo de Energías Alternativas Ambiente - ESPOCH</h3>
+                <h4>Research Assistant</h4>
+                <div style="margin-top:1rem;margin-bottom:1rem;" align=center>
+                    <script type="text/tikz">
+                    $\begin{tikzpicture}[scale=0.405]
+                    \foreach \i in {1,...,70}
+                    \fill[red!70] (1.5+rand*1.5, 1.5+rand*1.5) circle (1.5pt);
+                    \foreach \i in {1,...,70} \fill[blue!70] (6.5+rand*1.5, 3.5+rand*1.5) circle (1.5pt);
+                    \foreach \i in {1,...,70} \fill[green!70] (2.5+rand*1.5, 6.5+rand*1.5) circle (1.5pt);
+                    \draw[gray!30, dashed] (1.5,1.5) circle (2.2);
+                    \draw[gray!30, dashed] (6.5,3.5) circle (2.2);
+                    \draw[gray!30, dashed] (2.5,6.5) circle (2.2);
+                    \end{tikzpicture}$
+                    </script>
+                </div>
+                <p style="text-align: justify;">My activities carried out at the GEAA - ESPOCH as research assistant, focusing on implementing a dynamic clustering algorithm in Python using K-Means algorithm. Dynamic clustering offers advantages over traditional methods in identifying climate patterns. The work included literature review on climate models, clustering algorithms, and dimensionality reduction techniques (PCA/EOF), followed by practical implementation using random data. Results showed the effectiveness of dynamic clustering on precipitation and temperature data from the CNRM and CMIP6 models.</p>
+            </div>
+        </div>
+    </section>
+
     <section id="notes">
-        <h2>Notes</h2>
+        <h2>NOTES</h2>
         <div class="project-grid">
             <div class="project-card">
                 <h3>Classical Mechanics</h3>
-                    <ul>
-                        <li><i>Upcoming...</i></li>
-                    </ul>
-            </div>
-            <div class="project-card">
-                <h3>Special & General Relativity</h3>
+                <div class="equation">
+                    $\frac{d^2\theta}{dt^2} + \frac{g}{L}\sin{\theta} = 0$
+                </div>
                 <ul>
-                    <li>Schwarzschild solution derivation (<a href="files/Schwarzschild_Solution.pdf" target="_blank"><i>PFD</i></a>)</li>
+                    <li><i>Upcoming...</i></li>
                 </ul>
             </div>
             <div class="project-card">
-                <h3>Quantum Physics</h3>
+                <h3>Special & General Relativity</h3>
+                <div class="equation">
+                    $R_{\mu\nu} - \frac{1}{2}Rg_{\mu\nu}=\frac{8\pi G}{c^4}T_{\mu\nu}$
+                </div>
+                <ul>
+                    <li>Schwarzschild solution derivation (<a href="files/Schwarzschild_Solution.pdf" target="_blank"><i>PDF</i></a>)</li>
+                </ul>
+            </div>
+            <div class="project-card">
+                <h3>Quantum Mechanics</h3>
+                <div class="equation">
+                    $i\hbar \frac{\partial}{\partial t} \Psi(\mathbf{r}, t) = \hat{H} \Psi(\mathbf{r}, t)$
+                </div>
                 <ul>
                     <li><i>Upcoming...</i></li>
                 </ul>
             </div>
             <div class="project-card">
                 <h3>Vector & Tensor Calculus</h3>
-                    <ul>
-                        <li><i>Upcoming...</i></li>
-                    </ul>
+                <div class="equation">
+                    $|\vec{v}| = \sqrt{v_x^2 + v_y^2 + v_z^2}$
+                </div>
+                <ul>
+                    <li><i>Upcoming...</i></li>
+                </ul>
             </div>
             <div class="project-card">
                 <h3>Calculus</h3>
-                    <ul>
-                        <li><i>Upcoming...</i></li>
-                    </ul>
+                <div class="equation">
+                    $f'(x) = \lim_{h \to 0} \frac{f(x + h) - f(x)}{h}$
+                </div>
+                <ul>
+                    <li><i>Upcoming...</i></li>
+                </ul>
             </div>
             <div class="project-card">
                 <h3>Electromagnetism</h3>
-                    <ul>
-                        <li><i>Upcoming...</i></li>
-                    </ul>
+                <div class="equation">
+                    $\nabla \cdot \mathbf{B} = 0$
+                </div>
+                <ul>
+                    <li><i>Upcoming...</i></li>
+                </ul>
             </div>
         </div>
     </section>
+
     <section id="outreach">
-        <h2>Outreach</h2>
+        <h2>OUTREACH</h2>
         <div class="project-grid">
             <div class="project-card">
                 <h3>Courses</h3>
-                    <ul>
-                        <li>Introduction to LaTeX (Spanish) (<a href="https://github.com/alexsarango/CursoLaTeX" target="_blank"><i>material</i></a>)</li>
-                    </ul>
+                <ul>
+                    <li>Introduction to LaTeX (Spanish) (<a href="https://github.com/alexsarango/CursoLaTeX" target="_blank"><i>material</i></a>)</li>
+                </ul>
             </div>
             <div class="project-card">
                 <h3>Talks</h3>
@@ -114,10 +225,18 @@
                         puzzle? (<a href="files/Lecture211124_Gravastar.pdf" target="_blank"><i>Slides</i></a>)</li>
                 </ul>
             </div>
+            <div class="project-card">
+                <h3>Teaching (Spanish)</h3>
+                <ul>
+                    <li>Physics for High School students (<a href="teaching.html#physics" target="_self"><i>link</i></a>)</li>
+                    <li>Mathematics for High School students (<a href="teaching.html#math" target="_self"><i>link</i></a>)</li>
+                </ul>
+            </div>
         </div>
     </section>
+
     <section id="contact">
-        <h2>Get in Touch</h2>
+        <h2>GET IN TOUCH</h2>
         <p>For any inquiry you can fill out the following form or reach me on either of the social media channels showed at the bottom.</p>
         <div class="responsive-container">
             <iframe class="responsive-container" src="https://docs.google.com/forms/d/e/1FAIpQLSex11WY5jnyrds8CRI4prahbgVuTgq-7RaY5ADe64N_EHLspQ/viewform?embedded=true">Loading…</iframe>
@@ -140,6 +259,7 @@
             </a>
         </div>
     </section>
+
     <footer>
         &copy; 2025 Alexander Sarango
     </footer>
