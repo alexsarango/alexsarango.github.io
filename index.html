@@ -54,9 +54,7 @@
     
             <div class="about-content">
                 <h2>ABOUT ME</h2>
-                <p style="text-align: justify;">I'm a dedicated graduate student with a strong interest in Astrophysics and Cosmology. During my undergraduate years, I discovered a deep passion for computational and theoretical physics. I like to connect the theoretical elegance of nature phenomena with cutting-edge computational frameworks. I culminated my bachelor's degree with my thesis research on gravastars, an alternative theory with the aim of solving the problems of classical black holes (you can read more about this <a href="#research">here</a>). You can feel free to explore and learn what I do and what I'm interested in.</p><br>
-                <p style="text-align: justify;">My interests in physics are: black holes in general relativity, gravastars, dark matter, quantum mechanics, holographic principle.</p><br>
-                <p style="text-align: justify;">My interests in computer science are: machine learning, artificial intelligent, big data, data science.</p>
+                <p style="text-align: justify;">I'm a dedicated graduate student with a strong interest in Relativity and Cosmology. Soon, I will be pursuing my MS degree of Applied Mathematical Sciences in Mathematical Physics. I also like to connect the theoretical elegance of nature phenomena with cutting-edge computational frameworks. I culminated my bachelor's degree with my thesis research on gravastars, an alternative theory with the aim of solving the problems of classical black holes (you can read more about this <a href="#research">here</a>). You can feel free to explore and learn what I do and what I'm interested in.</p>
                 <div class="cv-buttons">
                     <a href="files/CV_AlexanderSarango_EN.pdf" class="btn" target="_blank">
                         Download CV
@@ -70,52 +68,7 @@
         <h2>RESEARCH</h2>
         <div class="project-grid">
             <div class="project-card">
-                <h3>Undergraduate Thesis: Gravastar Model with Vanishing Complexity</h3>
-                <div style="margin-top:1rem;margin-bottom:1rem;" align=center>
-                    <script type="text/tikz">
-                    \def\k{0.55191496}
-                    \tikzset{
-                    sphere color/.store in=\spherecolor,
-                    sphere scale/.store in=\spherescale,
-                    sphere color=blue,
-                    sphere scale=1,
-                    sphere/.style={
-                        ultra thick,
-                        line join=round,
-                        draw=#1!75!black,
-                        ball color=#1,
-                        },
-                    sphere inside/.style={
-                        shading angle=180,
-                        sphere=#1!25!gray!75!black
-                        }
-                    }
-                    \newenvironment{sphere}[1][]{
-                    \begin{scope}[x=(0:1cm), y=(90:1cm), z=(260:0.25cm), #1]
-                    \path [sphere inside=\spherecolor, scale=\spherescale] 
-                    circle [radius=1];}{
-                    \path let \n1={cos 10}, \n2={sin 10} in [sphere=\spherecolor, scale=\spherescale, even odd rule, opacity=1]
-                    circle [radius=1] 
-                    % Rotate 10 degrees around the y and x axes
-                    [x={(\n1, \n2^2, \n2*\n1)},
-                    y={(0, \n1, \n2)}, 
-                    z={(-\n2, -\n1*\n2, \n1^2)}] (0,1,0) 
-                    .. controls ++( 0, 0,\k) and ++(0,\k, 0) .. (0, 0, 1)
-                    .. controls ++(\k, 0, 0) and ++(0, 0,\k) .. (1, 0, 0) 
-                    .. controls ++(0, \k, 0) and ++(\k,0, 0) .. (0, 1, 0);
-                    \end{scope}}
-                    \begin{tikzpicture}[scale=.5]
-                    \begin{sphere}[sphere scale=3, sphere color=blue]   
-                    \end{sphere}
-                    \draw[fill=gray] (-.6,-1.2) to[in=-120,out=100] (0,2.9) to[in=90,out=0] (2.9,-.1) to[in=0,out=-130] (-.6,-1.2);
-                    \draw[stealth-,black, very thick] (1,0.5) -- ++(45:3) node[right] {\small BEC};
-                    \draw[black] (-3.5,2.7) node[above,align=center] {\large Schwarzschild};
-                    \draw[black] (-3.5,2) node[above,align=center] {\large exterior};
-                    \draw[stealth-,black, very thick] (-1,-1.4) -- ++(225:2.5) node[left] {\large thin shell};
-                    \draw (0.5,0) node[below] {\large $\Lambda>0$};
-                    \end{tikzpicture}
-                    </script>
-                </div>
+                <h3>Undergraduate Thesis: Gravastar Model with Vanishing Complexity</h3><br
                 <p style="text-align: justify;">The goal of this research was to develop a new gravastar model with vanishing complexity, a condition useful for the study of complex stellar objects. To achieve this, the methodology employed consisted of using extended minimal geometric deformation approach under the gravitational decoupling framework. Through this methodology, a new gravastar solution was obtained and it was demonstrated that this new solution satisfies the necessary conditions to be considered a physically acceptable solution.</p>
                 <div class="thesis-buttons">
                     <a href="https://dspace.espoch.edu.ec/items/a0a04c02-2416-44d1-afd9-cdfe677be623" class="btn" target="_blank">
@@ -128,20 +81,7 @@
             </div>
             <div class="project-card">
                 <h3>GEAA - ESPOCH</h3>
-                <h4>Research Assistant</h4>
-                <div style="margin-top:1rem;margin-bottom:1rem;" align=center>
-                    <script type="text/tikz">
-                    $\begin{tikzpicture}[scale=0.405]
-                    \foreach \i in {1,...,70}
-                    \fill[red!70] (1.5+rand*1.5, 1.5+rand*1.5) circle (1.5pt);
-                    \foreach \i in {1,...,70} \fill[blue!70] (6.5+rand*1.5, 3.5+rand*1.5) circle (1.5pt);
-                    \foreach \i in {1,...,70} \fill[green!70] (2.5+rand*1.5, 6.5+rand*1.5) circle (1.5pt);
-                    \draw[gray!30, dashed] (1.5,1.5) circle (2.2);
-                    \draw[gray!30, dashed] (6.5,3.5) circle (2.2);
-                    \draw[gray!30, dashed] (2.5,6.5) circle (2.2);
-                    \end{tikzpicture}$
-                    </script>
-                </div>
+                <h4>Research Assistant</h4><br
                 <p style="text-align: justify;">My activities carried out at the GEAA - ESPOCH as research assistant, focusing on implementing a dynamic clustering algorithm in Python using K-Means algorithm. Dynamic clustering offers advantages over traditional methods in identifying climate patterns. The work included literature review on climate models, clustering algorithms, and dimensionality reduction techniques (PCA/EOF), followed by practical implementation using random data. Results showed the effectiveness of dynamic clustering on precipitation and temperature data from the CNRM and CMIP6 models.</p>
             </div>
         </div>
@@ -198,23 +138,14 @@
     </section>
 
     <section id="contact">
-        <h2>GET IN TOUCH</h2>
-        <p>For any inquiry you can fill out the following form or reach me on either of the social media channels showed at the bottom.</p>
-        <div class="responsive-container">
-            <iframe class="responsive-container" src="https://docs.google.com/forms/d/e/1FAIpQLSex11WY5jnyrds8CRI4prahbgVuTgq-7RaY5ADe64N_EHLspQ/viewform?embedded=true">Loading…</iframe>
-        </div>
+        <h2>CONTACT</h2>
+        <p>You can contact me at alexandersarango[at]gmail.com.</p>
         <div class="social-links">
             <a href="https://twitter.com/aleexsarango" class="icon">
                 <i class="fa-brands fa-x-twitter"></i>
             </a>
             <a href="https://instagram.com/aleexsarango" class="icon">
                 <i class="fa-brands fa-instagram"></i>
-            </a>
-            <a href="https://open.spotify.com/user/alexandersarango" class="icon">
-                <i class="fa-brands fa-spotify"></i>
-            </a>
-            <a href="https://github.com/alexsarango" class="icon">
-                <i class="fa-brands fa-github"></i>
             </a>
             <a href="https://linkedin.com/in/alexander-sarango" class="icon">
                 <i class="fa-brands fa-linkedin"></i>
